@@ -440,37 +440,24 @@ console.log( 'The most items sold in a single transaction is:', mostItems );
 
 
 
-// var sumOfSmallestPurchase;
-// var purchase = [];
-// var smallestItems = 0
-//
-//
-// var purchases = transactions.filter(transaction => transaction.type === 'purchase');
-//
-// console.log(purchases);
-// console.log('purchases--length---');
-// var transLength = purchases.map(purchase => purchase.items);
-//
-// var trans = purchases[0].items.length
-// console.log('-----t**********');
-// console.log(transLength);
-//
-//
-//
-//
-// console.log(a);
-
-//
-//   if (tran.items.length < tran){
-//     trans = tran.items.length
-//   };
-//   return trans
-// })
 
 
 
+var purchases = transactions.filter(transaction => transaction.type === 'purchase');
+var transLength = purchases.map(purchase => purchase.items);
+var trans = purchases[0].items.length
+
+transLength.forEach(function(tran){
+  if(tran.length < trans) {
+    trans = tran
+  }
+})
 
 
+var sumOfSmallestPurchase = 0;
+trans.forEach(function (tran){
+  sumOfSmallestPurchase +=tran.price
+});
 
 
 
