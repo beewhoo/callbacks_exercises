@@ -418,14 +418,15 @@ console.log( 'The net profit is:', netProfit );
   HINTS:
   - The result of this calculation should be a number (not an array, object, or other data type).
 */
-var mostItems = 0;
+var mostItems = transactions[0].items.length;
+
 transactions.forEach(function(transaction){
   if (transaction.items.length > mostItems){
     mostItems = transaction.items.length
   };
   return mostItems
 });
-
+console.log('------mostItems-----');
 
 console.log( 'The most items sold in a single transaction is:', mostItems );
 
@@ -438,20 +439,35 @@ console.log( 'The most items sold in a single transaction is:', mostItems );
 */
 
 
-var sumOfSmallestPurchase;
-var purchase = [];
-var smallestItems = 0
+
+// var sumOfSmallestPurchase;
+// var purchase = [];
+// var smallestItems = 0
+//
+//
+// var purchases = transactions.filter(transaction => transaction.type === 'purchase');
+//
+// console.log(purchases);
+// console.log('purchases--length---');
+// var transLength = purchases.map(purchase => purchase.items);
+//
+// var trans = purchases[0].items.length
+// console.log('-----t**********');
+// console.log(transLength);
+//
+//
+//
+//
+// console.log(a);
+
+//
+//   if (tran.items.length < tran){
+//     trans = tran.items.length
+//   };
+//   return trans
+// })
 
 
-var purchases = transactions.filter(transaction => transaction.type === 'purchase');
-console.log('-------purchases------');
-console.log(purchases);
-console.log('purchases--length---');
-var itemsLength = purchases.map(purchase => purchase.items.length);
-
-sum = Math.min(itemsLength)
-
-console.log(sum);
 
 
 
