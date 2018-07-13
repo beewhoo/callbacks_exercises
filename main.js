@@ -454,11 +454,7 @@ transLength.forEach(function(tran){
 })
 
 
-var sumOfSmallestPurchase = 0;
-trans.forEach(function (tran){
-  sumOfSmallestPurchase +=tran.price
-});
-
+var sumOfSmallestPurchase = trans.reduce((a,b) => a + b.price, 0);
 
 
 console.log( 'The sum of the smallest purchase is:', sumOfSmallestPurchase );
